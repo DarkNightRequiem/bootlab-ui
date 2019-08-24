@@ -10,11 +10,8 @@
 
       <div class="btn-toolbar" style="margin-top: 10%; padding:0; width: 100%;">
         <div class="btn-group">
-          <button type="button" class="btn btn-outline-danger" v-on:click="jumpToPomdpSalClick">PomdpSal</button>
-          <button type="button" class="btn btn-outline-success" >新闻推送程序</button>
+          <button type="button" class="btn btn-outline-danger" v-on:click="jumpToNewsApp">新闻推送程序</button>
           <button type="button" class="btn btn-outline-dark"> 宠物租赁电商</button>
-          <button id="sblearn" type="button" class="btn btn-outline-primary" onclick=sblearnOnClick()>Spring Boot 案例学习
-          </button>
         </div>
 
         <div class="btn-group">
@@ -32,9 +29,6 @@
   // 导入其他资源
   import logo from '../assets/boot-lab.png'
 
-  // 导入其他vue组件
-  import MyFooter from './common/MyFooter'
-
   export default {
     name: 'Welcome',
     data() {
@@ -42,11 +36,8 @@
         logo: logo
       }
     },
-    components: {
-      MyFooter
-    },
     methods: {
-      jumpToPomdpSalClick: function () {
+      jumpToNewsApp: function () {
         this.$router.push({path:'/ps'})
       }
     }

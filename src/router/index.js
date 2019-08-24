@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Welcome from '../components/Welcome'
-import PomdpSal from '../components/pomdpsal/PomdpSal'
+import NewsApp from '../components/newsapp/NewsApp'
 
 Vue.use(Router)
 
@@ -13,8 +13,8 @@ export default new Router({
       component: Welcome
     }, {
       path: '/ps',
-      name: 'PomdpSal',
-      component: PomdpSal
+      name: 'NewsApp',
+      component: NewsApp
     }
   ]
 })

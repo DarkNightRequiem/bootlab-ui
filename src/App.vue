@@ -6,12 +6,7 @@
 
 <script>
   export default {
-    name: 'App',
-    data() {
-      return{
-        footer_show:true,
-      }
-    }
+    name: 'App'
   }
 </script>
 
