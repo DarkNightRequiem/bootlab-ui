@@ -5,17 +5,16 @@
       <h1>Welcome to BootLab</h1>
 
       <div style="margin-top: 10%">
-        <img :src="logo">
+        <img v-bind:src="logo">
       </div>
 
       <div class="btn-toolbar" style="margin-top: 10%; padding:0; width: 100%;">
         <div class="btn-group">
-          <button type="button" class="btn btn-outline-danger">PomdpSalSearch</button>
-          <button type="button" class="btn btn-outline-success" onclick="newsAppONClick()">
-            新闻推送程序
-          </button>
+          <button type="button" class="btn btn-outline-danger" v-on:click="jumpToPomdpSalClick">PomdpSal</button>
+          <button type="button" class="btn btn-outline-success" >新闻推送程序</button>
           <button type="button" class="btn btn-outline-dark"> 宠物租赁电商</button>
-          <button id="sblearn" type="button" class="btn btn-outline-primary" onclick=sblearnOnClick()>Spring Boot 案例学习</button>
+          <button id="sblearn" type="button" class="btn btn-outline-primary" onclick=sblearnOnClick()>Spring Boot 案例学习
+          </button>
         </div>
 
         <div class="btn-group">
@@ -43,8 +42,13 @@
         logo: logo
       }
     },
-    components:{
+    components: {
       MyFooter
+    },
+    methods: {
+      jumpToPomdpSalClick: function () {
+        this.$router.push({path:'/ps'})
+      }
     }
   }
 </script>
